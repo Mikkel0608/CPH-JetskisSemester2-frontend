@@ -31,11 +31,6 @@ export default class Customer extends User{
                 }
             });
     }
-    //An example of polymorphism. The method redirects the user after a successful login
-    logIn(){
-        console.log('customer login');
-        window.location = '../html/index.html'
-    }
     //Method that sends a DELETE request to the API. userid property is used to make the url dynamic
     //Redirects the user once the server sends a response after deletion
     deleteCustomer (){

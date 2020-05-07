@@ -5,7 +5,8 @@ export default class User {
         this.password = password;
     }
     logIn(){
-        console.log('Log in');
+        console.log('customer login');
+        window.location = '../html/index.html'
     }
 }
 
