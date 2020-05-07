@@ -1,7 +1,7 @@
 import {removeNode, showOrder} from "./modules/showOrderFunctions.js";
 import Order from "./class_Order.js";
 import OrderProduct from "./class_OrderProduct.js";
-
+//
 //Html elements
 const sortBtn = document.getElementById('sortBtn');
 const sort = document.getElementById('sort');
