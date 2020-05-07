@@ -62,5 +62,3 @@ function showInfo (){
             getOrderId(`http://localhost:3000/adminpage/ordersByUser/${idSelect.value}`, selection);
         });
 }
-
-// Sådan?
