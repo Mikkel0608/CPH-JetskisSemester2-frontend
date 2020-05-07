@@ -6,7 +6,7 @@ export default class Admin extends User{
     }
     //An example of polymorphism. The method redirects the admin after a successful login
     logIn() {
-        console.log('adm login');
+        console.log('Admin login');
         window.location = '../html/Adminpage.html';
     }
 }
