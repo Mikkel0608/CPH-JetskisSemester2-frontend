@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CPH Jetskis</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/styles.css">
+</head>
+
+<body style="background-color:rgb(245, 246, 250);">
+
+<!-- Navigation bar and navigation buttons -->
+<div id="naviBar">
+    <div>
+        <h1 id="headTitle">CPH JETSKIS </h1>
+    </div>
+    <a href="index.html"><button style="border-right-width=1px" id="buttonStyle"> Forside </button></a>
+    <a href="orderpage.html"><button style="border-right-width: 0; border-left-width: 0" id="buttonStyle"> Bestil tid </button></a>
+    <a href="profile.html"><button id="buttonStyle"> Profil </button> </a>
+    <!-- If user is active in localStorage, show the users phone: -->
+    <button id="loginPhone"> </button>
+</div>
+
+<!-- Headline on the page-->
+<div id="tekstFelt">
+    <br><br><br>
+    <h2 style="font-family: modernSansLight; font-size:30px;"> Lej en vandscooter </h2>
+    <br>
+</div>
+    <!-- Selection of date and time -->
+<div action="createOrder" method="POST">
+<div name="chooseDate">
+    <h3> Vælg venligst et udlejningstidspunkt for at se ledige vandscootere:</h3>
+    <br>
+    <p> Udlejningsdato </p>
+    <select type="text" name="rentDay" id="rentDay">
+        <option value="00" selected disabled>-Dag-</option>
+        <option value="01">01</option>
+        <option value="02">02</option>
+        <option value="03">03</option>
+        <option value="04">04</option>
+        <option value="05">05</option>
+        <option value="06">06</option>
+        <option value="07">07</option>
+        <option value="08">08</option>
+        <option value="09">09</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+    </select>
+    <select type="text" name="rentMonth" id="rentMonth">
+        <option value="00" selected disabled>-Måned-</option>
+        <option value="1">January</option>
+        <option value="2">February</option>
+        <option value="3">March</option>
+        <option value="4">April</option>
+        <option value="5">May</option>
+        <option value="6">June</option>
+        <option value="7">July</option>
+        <option value="8">August</option>
+        <option value="9">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>
+    </select>
+
+    <select type="text" name="rentYear" id="rentYear">
+        <option value="00" selected disabled>-År-</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+    </select>
+    <br><br>
+    <p> Udlejningstidspunkt</p>
+    <select type="text" name="rentTime" id="rentTime">
+        <option value="00" selected disabled>-Tid-</option>
+        <option value="10-12">10:00-12:00</option>
+        <option value="12-14">12:00-14:00</option>
+        <option value="14-16">14:00-16:00</option>
+        <option value="16-18">16:00-18:00</option>
+    </select>
+    <br><br><br>
+
+    <!-- This confirmation button checks the available products for the given time -->
+    <button type="button" id="confirmTime"> Vælg tidspunkt </button>
+
+</div>
+</div>
+<br><br>
+<hr>
+<!-- The template modelContainer that is cloned for every product in the DB -->
+    <div id="noProducts" style="display: none;"><h2> Ingen ledige produkter på valgte tidspunkt. </h2></div>
+    <div id="productContainer">
+    <div style="display: none; float: left; width: 100%;" id="modelContainer">
+    <div style="width:100%; height: 50px; background-color: #00A8FF; position: relative; top: 10px;">
+        <h2 id="jetskiHeadline"></h2>
+    </div>
+        <div style="float: left; width: 45%; padding: 20px" id="jetski1Photo">
+        <img style="width:100%" src="">
+        </div>
+    <div style="float: left; width: 45%; padding: 20px" id="jetski1Text">
+        <p></p>
+        <select type="text" id="orderAmount1">
+            <option value="00" selected disabled> -Antal- </option>
+            <option value="0">0</option>
+        </select>
+        <br style="clear: left">
+    </div>
+</div>
+
+<!-- Jetski model 2-->
+    <!--
+<div style="display: none; float: left; width: 100%;" id="modelContainer2">
+    <div style="width:100%; height: 50px; background-color: #00A8FF; position: relative; top: 10px;">
+        <h2 id="jetskiHeadline"> Yamaha Waverunner VX </h2>
+    </div>
+    <div style="float: left; width: 45%; padding: 20px;" id="jetski2Photo">
+        <img style="width: 100%" src="../images/yamaha-waverunner-vx.jpg">
+    </div>
+    <div style="float: left; width: 45%; padding: 20px;" id="jetski2Text">
+        <p>Pris: 500 kr. for 2 timer. <br><br>
+        Antal: </p>
+        <select onchange="calculatePrice()" type="text" name="orderAmount2" id="orderAmount2">
+            <option value="0" selected disabled> -Antal- </option>
+            <option value="00">0</option>
+            <option id="jetski2Amount1" value="1">1</option>
+            <option id="jetski2Amount2" value="2">2</option>
+            <option id="jetski2Amount3" value="3">3</option>
+        </select>
+    </div>
+    <br style="clear: left">
+</div>
+-->
+
+<!-- Jetski model 3-->
+    <!--
+<div style="display: none; float: left; width: 100%;" id="modelContainer3">
+    <div style="width:100%; height: 50px; background-color: #00A8FF; position: relative; top: 10px;">
+        <h2 id="jetskiHeadline"> Kawasaki STF-15F </h2>
+    </div>
+    <div style="float: left; width: 45%; padding: 20px;" id="jetski3Photo">
+        <img style="width: 100%" src="../images/kawasaki-stx-15f.jpg">
+    </div>
+    <div style="float: left; width: 45%; padding: 20px;" id="jetski3Text">
+        <p>Pris: 600 kr. for 2 timer. <br><br>
+        Antal: </p>
+        <select onchange="calculatePrice()" type="text" name="orderAmount3" id="orderAmount3">
+            <option value="0" selected disabled> -Antal- </option>
+            <option value="00">0</option>
+            <option id="jetski3Amount1" value="1">1</option>
+            <option id="jetski3Amount2" value="2">2</option>
+            <option id="jetski3Amount3" value="3">3</option>
+        </select>
+    </div>
+    <br style="clear: left">
+</div>
+    -->
+</div>
+<!-- The following is code for the basket. It is made up of different divs, and should only be shown after the user
+selects an amount of jetskis. -->
+<!-- basketDivFull is the div that spans the entire basket. Display should be "none" unless the user adds something
+ to it -->
+<div style="display:none;" id="basketDivFull">
+    <div id="basketDivHeadline">
+        <div style="position:absolute; top: 4px; left: 5px;">
+            Kurv:
+        </div>
+    </div>
+    <div id="basketDivMain">
+        <div style="display: none; width: 100%; float: left;" id="basketProduct">
+            <img style="width:30%; float:left; " src="">
+        </div>
+    </div>
+    <div id="basketDivBorder"></div>
+    <div id="basketDivBottom">
+        <div id="totalPriceText" style="position: absolute; left: 5px; top: 15px;">
+            <!-- The following div "totalPrice" shows the total price of everything in the basket  -->
+            <div name="totalPrice" id="totalPrice"> </div>
+        </div>
+       <button type="button" id="confirmPurchaseButton"> BESTIL </button></a>
+    </div>
+    <br style="clear: left">
+</div>
+</form>
+<script type="module" src="../Javascript/orderPage.js"></script>
+<script type="text/javascript" src="../Javascript/getActiveId.js"></script>
+
+</body>
+
+</html>

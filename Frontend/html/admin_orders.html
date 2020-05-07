@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CPH Jetskis-admin</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/Adminstyle.css">
+</head>
+
+<body style="background-color:rgb(245, 246, 250)">
+
+<!-- Name and logo -->
+<div>
+    <h1 id="headTitle"> Bestilling-admin </h1>
+</div>
+
+<!-- Navigation bar and navigatio n buttons -->
+<div id="naviBar">
+    <a href="Adminpage.html"><button id="buttonStyle"> Tilbage til forsiden </button></a>
+
+</div>
+
+<div id ="orders" style="position: relative; top: 40px" >
+    <h4>Sorter blandt alle ordrer</h4>
+    <select id="sort">
+        <option id="date">Bruger ID</option>
+        <option id="id" >Ordre ID</option>
+        <option id="price" >Pris(højeste)</option>
+    </select>
+    <button id="sortBtn">Sorter</button>
+    <br>
+    <h5>Eller:</h5>
+    <h4>Søg efter et enkelt ordre ID</h4>
+    <input id="search" placeholder="Søg efter et ordre ID">
+    <button id="searchBtn">Søg</button>
+    <br>
+    <br>
+    <div id="orderList" style="height: 450px; width: 100%; border:solid black 2px; overflow: scroll;">
+        <p> Tryk "Sorter" for at se bookinger, eller søg efter et ordre ID </p>
+    </div>
+</div>
+
+<table>
+
+
+
+</table>
+
+<script type="module" src="../Javascript/admin_orders.js"></script>
+</body>
+</html>

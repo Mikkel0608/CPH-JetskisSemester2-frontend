@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>CPH Jetskis</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/styles.css">
+</head>
+
+<body style="background-color:rgb(245, 246, 250)">
+
+<!-- Navigation bar and navigation buttons -->
+<div id="naviBar">
+    <div>
+        <h1 id="headTitle">CPH JETSKIS </h1>
+    </div>
+    <a href="index.html"><button id="buttonStyle"> Forside </button></a>
+    <a href="orderpage.html"><button style="border-right-width: 0; border-left-width: 0" id="buttonStyle"> Bestil tid </button></a>
+    <a href="profile.html"><button id="buttonStyle"> Profil </button> </a>
+    <!-- If user is active in localStorage, show the users phone: -->
+    <button id="loginPhone"> </button>
+</div>
+
+<!-- Text on the page-->
+<br><br><br>
+<div style="float: left" id="leftTextArea">
+    <h2 style="font-family: modernSansLight; font-size: 30px;"> Brugerprofil </h2>
+    <div id="userInfoList" style="height: 400px; width: 342px; border:solid black 2px; overflow: scroll;">
+</div>
+<!--
+    <p id="userid"></p>
+
+    <p id="customerName"></p>
+
+
+    <p id="customerStreetName"></p>
+
+    <p id="customerStreetNumber"></p>
+
+    <p id="customerPostalCode"></p>
+
+    <p id="customerCity"></p>
+
+    <p id="customerPhone"></p>
+
+    <p id="customerEmail"></p>
+
+    <p id="created_at"></p>
+
+-->
+    <br><br>
+    <button id="logOutBtn" class="button" >Log ud </button>
+    <a href ="updatePassword.html"><button id="buttonOnPage" class="button">Opdater password</button></a>
+    <button id="delUserBtn"class="button" >Slet bruger </button>
+
+    <!--<option id="order1"></option>-->
+
+
+    </select>
+</div>
+<div style="position: absolute; top: 70px; right: 300px; z-index: 1;" id="rightTextArea">
+    <h4> Dine reservationer:</h4>
+    <div id="orderList" style="height: 400px; width: 342px; border:solid black 2px; overflow: scroll;">
+    <p id="noOrders"> Vælg en reservation i menuen </p>
+    </div>
+    <select id="orderId">
+        <option value="0" selected disabled id="optionOrder">Vælg reservation</option>
+        <br>
+    </select>
+    <button id="showOrderBtn" >Vis reservation</button>
+    <button id="delOrderBtn" >Annuller bestilling</button>
+
+
+
+</div>
+
+<script type="module" src="../Javascript/profile.js"></script>
+
+
+</body>
+
+</html>

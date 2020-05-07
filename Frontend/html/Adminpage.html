@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CPH Jetskis-admin</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/Adminstyle.css">
+</head>
+
+<body style="background-color:rgb(245, 246, 250)">
+
+<!-- Names and logo -->
+<div>
+    <h1 id="headTitle"> CPH JETSKIS-admin </h1>
+</div>
+
+<!-- Navigation bar and navigation buttons -->
+<div id="naviBar">
+    <a href="admin_orders.html"><button style="border-right-width: 0; border-left-width: 0;" id="buttonStyle"> Alle ordrer </button></a>
+    <a href="admin_users.html"><button id="buttonStyle"> Brugeroversigt </button> </a>
+    <button style="border-right-width: 0; border-left-width: 0;" id="logOutBtn"> Log ud </button>
+
+</div>
+<script>
+    const logOutBtn = document.getElementById('logOutBtn');
+    logOutBtn.onclick =()=>{
+        fetch('http://localhost:3000/profile/logout', {
+            credentials: "include",
+            method: "GET"
+        }).then(response => response.json())
+            .then(json => {
+                if (json == 'ok'){
+                    window.location = '../html/index.html'
+                }
+            })
+    };
+</script>
+
+</body>
+</html>

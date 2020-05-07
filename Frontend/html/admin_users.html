@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CPH Jetskis-admin</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/Adminstyle.css">
+</head>
+
+<body style="background-color:rgb(245, 246, 250)">
+
+
+<!-- Name and logo -->
+<div>
+    <h1 id="headTitle"> Bruger-admin </h1>
+</div>
+
+<!-- Navigation bar and navigation buttons -->
+<div id="naviBar">
+    <a href="Adminpage.html"><button id="buttonStyle"> Tilbage til forsiden </button></a>
+
+</div>
+<h2> style="font-family: modernSansLight; font-size: 30px;"> Brugerprofil </h2>
+
+<h3>Vælg brugerens bruger-id for at se brugerinformation</h3>
+
+
+<select id="phoneSelect">
+    <option selected disabled id="optionTlf"> Bruger-ID </option>
+</select>
+<!--<button id=showinfo onclick="showInfo(), showOrder()">Vis brugeroplysninger</button>-->
+
+<button type="button" id="showInfo" >Vis bruger</button>
+<br>
+<br>
+
+ <div style="float: left">
+    <div id="userInfoList" style="height: 400px; width: 342px; border: solid black 2px; overflow: scroll;">
+    </div>
+
+ </div>
+
+<div style="position: absolute; top: 85px; right: 300px; z-index: 1;" id="rightTextArea">
+    <h4> Kundens reservationer:</h4>
+    <div id="orderList" style="height: 400px; width: 342px; border:solid black 2px; overflow: scroll;">
+        <p id="noOrders"> Vælg en reservation i menuen </p>
+    </div>
+    <select id="orderId">
+        <option value="0" selected disabled id="optionOrder">Vælg reservation</option>
+        <br>
+    </select>
+    <button id="showOrder" >Vis reservation</button>
+
+</div>
+
+<script type="module" src="../Javascript/admin_users.js"></script>
+
+
+</body>
+
+</html>

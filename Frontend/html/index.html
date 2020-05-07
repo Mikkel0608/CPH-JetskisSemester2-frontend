@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CPH Jetskis</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/styles.css">
+    <script type="text/javascript" src="../Javascript/getActiveId.js"></script>
+</head>
+
+<body style="background-color:rgb(245, 246, 250); margin: 0; padding:0;">
+
+<!-- Navigation bar and navigation buttons -->
+<div id="naviBar">
+    <div>
+        <h1 id="headTitle">CPH JETSKIS </h1>
+    </div>
+    <a href="index.html"><button id="buttonStyle"> Forside </button></a>
+    <a href ="orderpage.html"><button style="border-right-width: 0; border-left-width: 0" id="buttonStyle"> Bestil tid </button></a>
+    <a href="profile.html"><button id="buttonStyle"> Profil </button></a>
+    <a href="Loginpage.html"><button id="buttonStyle"> Log ind </button></a>
+    <!-- Login button will only be shown if the localStorage is empty -->
+    <a id="loginButton" style="display:" href='Loginpage.html'><button style="position: absolute; right:0px;" id="buttonStyle"> Log-Ind </button> </a>
+    <!-- If user is active in localStorage, show the users phone: -->
+    <button id="loginPhone"> </button>
+</div>
+
+<!-- Text on the page-->
+<div id="textField">
+    <br><br>
+    <img width="100%" height="100%" src="../images/frontPhoto.png">
+    <h2 style="font-family: modernSansLight; font-size:30px; width:100%;">VELKOMMEN TIL CPH JETSKIS - Vandscooter udlejning i København</h2>
+</div>
+<div id="frontContainer">
+    <div id="frontContainerPhoto" style="float: left; width: 50%; max-height: 640px;">
+        <img style="width:100%;" src="../images/jetski-frontphoto-2-cropped.png">
+    </div>
+    <div id="frontContainerText" style="background-color: #00A8FF; height: 100%; margin: auto; width:50%; position: absolute; right: 0; top: 0;">
+        <h1 style="font-family:modernSansLight; color: ghostwhite; font-size: 30px; text-align: center;"> UDLEJ FRA KUN 300 KR. </h1>
+        <div id="frontText">
+        <ul>
+            <br><br>
+             <li> De vildeste maskiner på markedet </li>
+            <br><br>
+            <li> De billigste priser i København </li>
+            <br><br>
+            <li> De fedeste oplevelser </li>
+            <br><br>
+            <li> Kvalitetssikret for at maksimere din sikkerhed </li>
+            <br><br>
+            <li> Bestil din vandscooter allerede i dag </li>
+    </ul>
+            <br><br>
+            <p style="text-align: center;"><a href="orderpage.html"><button id="frontButton"> SE VORES UDVALG </button></p></a>
+        </p>
+    </div>
+    </div>
+</div>
+<script type="text/javascript" src="../Javascript/getActiveId.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+@font-face {
+    font-family: modernSansLight;
+    src: url("../fonts/ModernSans-Light.otf")
+}
+
+#headTitle {
+    font-family: Candara;
+    font-style: oblique;
+    position: absolute;
+    font-size: 25px;
+    top: -8px;
+    z-index: 3;
+    color: ghostwhite;
+    left: 5px;
+}
+
+#naviBar {
+    position: fixed;
+    background-color: rgb(0, 168, 255);
+    text-align: center;
+    width:100%;
+    top:0;
+    left:0;
+    font-size:0;
+    z-index: 10;
+    height: 50px;
+    overflow: hidden;
+}
+
+#buttonStyle {
+    font-family: modernSansLight;
+    font-size: 17px;
+    color: ghostwhite;
+    background-color: rgb(0, 168, 255);
+    width: 7%;
+    height: 100%;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-color: ghostwhite;
+    cursor: pointer;
+    transition: 0.1s;
+}
+#buttonStyle:hover {
+    background-color: ghostwhite;
+    color: rgb(0, 168, 255);
+}
+
+#loginPhone {
+    font-family: modernSansLight;
+    font-size: 17px;
+    color: ghostwhite;
+    background-color: rgb(0, 168, 255);
+    width: 15%;
+    height: 50px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-color: ghostwhite;
+    position: absolute;
+    right: 0px;
+}
+
+#buttonOnPage {
+    font-family: modernSansLight;
+    font-size: 17px;
+    color: ghostwhite;
+    background-color: rgb(0, 168, 255);
+    border-color: ghostwhite;
+    height: 40px;
+    cursor: pointer;
+}
+
+#jetskiHeadline {
+    position: absolute;
+    top:-15px;
+    left: 150px;
+    font-family: modernSansLight;
+    font-size: 30px;
+    color: ghostwhite;
+}
+
+#basketDivHeadline {
+    width: 25%;
+    height: 25px;
+    bottom: 300px;
+    right: 0;
+    position: fixed;
+    background-color: rgb(0, 168, 255);
+    color: ghostwhite;
+    font-family: modernSansLight;
+    font-size: 20px;
+    border-top-style: solid;
+    border-left-style: solid;
+    border-color: ghostwhite;
+    border-width: 1px;
+}
+
+#basketDivMain {
+    right: 0;
+    width: 24.6%;
+    bottom: 50px;
+    height: 250px;
+    background-color: ghostwhite;
+    position: fixed;
+    overflow: auto;
+}
+
+#basketDivBorder {
+    width: 0.4%;
+    height: 300px;
+    bottom: 0px;
+    right: 24.6%;
+    position: fixed;
+    background-color: rgb(0, 168, 255);
+    color: ghostwhite;
+    font-family: modernSansLight;
+    font-size: 20px;
+    border-left-width: 1px;
+    border-color: ghostwhite;
+    border-left-style: solid;
+}
+#basketDivBottom {
+    width: 25%;
+    height: 50px;
+    bottom: 0px;
+    right: 0;
+    position: fixed;
+    background-color: rgb(0, 168, 255);
+    color: ghostwhite;
+    font-family: modernSansLight;
+    font-size: 20px;
+}
+
+#confirmPurchaseButton {
+    font-family: modernSansLight;
+    font-size: 20px;
+    color: rgb(0, 168, 255);
+    background-color: ghostwhite;
+    border-color: ghostwhite;
+    height: 30px;
+    cursor: pointer;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+#frontContainer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+#frontText {
+    color: ghostwhite;
+    font-family: modernSansLight;
+    font-size: 25px;
+}
+@media screen and (max-width: 1100px) {
+    #frontText {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 900px) {
+    #frontText {
+        font-size: 15px;
+    }
+}
+
+#frontButton {
+    font-family: modernSansLight;
+    font-size: 30px;
+    color: ghostwhite;
+    background-color: #00A8FF;
+    border-color: ghostwhite;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+#frontButton:hover {
+    background-color: ghostwhite;
+    color: #00A8FF;
+}
