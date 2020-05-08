@@ -17,7 +17,6 @@ export default class Customer extends User{
     //User is redirected when the server sends a specific response back
     createCustomer (){
         fetch('http://localhost:3000/register', {
-            credentials: "include",
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
