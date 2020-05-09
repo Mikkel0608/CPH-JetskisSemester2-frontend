@@ -57,12 +57,18 @@ export default class Order {
     //Sends a post request with the object in JSON-format in the request body
     //The header, which contains metadata about the request body, specifies json data
     createOrder() {
-
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", 'http://localhost:3000/orderPage/submitOrder', true);
-        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        xhr.withCredentials = true;
-        xhr.send(JSON.stringify(this));
-        window.location = "orderConfirmation.html";
+        fetch('http://localhost:3000/orderPage/submitOrder', {
+            credentials: "include",
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(this)
+        }).then(response => response.json())
+            .then(json => {
+                if (json == 'ok') {
+                    window.location = "orderConfirmation.html";
+                }
+            })
     }
 }
