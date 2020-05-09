@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50dd83c9-82fc-43f4-a014-87cbdc872b58" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Javascript/class_Customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Javascript/class_Customer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javascript/class_User.js" beforeDir="false" afterPath="$PROJECT_DIR$/Javascript/class_User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javascript/orderPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Javascript/orderPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +35,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588844405580</updated>
-      <workItem from="1588844407242" duration="3383000" />
+      <workItem from="1588844407242" duration="7887000" />
     </task>
     <servers />
   </component>
@@ -43,9 +43,9 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1588857942874">
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1589011180379">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.23.1280.777@0.23.1280.777" timestamp="1588857942874" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.23.1280.777@0.23.1280.777" timestamp="1589011180379" />
   </component>
 </project>

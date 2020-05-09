@@ -60,12 +60,14 @@ function confirmTime() {
                         if (json[i].quantity !== 0) {
                             //MM: The shown products array only contains the objects that are shown on the page
                             shownProducts.push(newProduct);
+                            //The generateProduct method creates an HTML element with the found product information
                             newProduct.generateProduct("modelContainer", [i]);
+                            //An event listener is added to the select element which activates the calculatePrice function
                             document.getElementById("modelContainer"+ [i]).getElementsByTagName('div')[2].getElementsByTagName('select')[0].addEventListener('change', calculatePrice);
                         }
                     }
                 }
-                console.log(storedProducts);
+                //If no products are available, a text message is shown
                 if (shownProducts.length === 0) {
                     document.getElementById('noProducts').style.display = "initial";
                 }
