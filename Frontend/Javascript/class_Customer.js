@@ -2,7 +2,7 @@ import User from "./class_User.js";
 
 
 export default class Customer extends User{
-    constructor(name, streetName, streetNumber, postalCode, city, phone, email, password, created_At, userId, userTypeId){
+    constructor(name, streetName, streetNumber, postalCode, city, phone, email, password, created_At, userId){
         super(name, email, password);
         this.streetName = streetName;
         this.streetNumber = streetNumber;
@@ -11,7 +11,6 @@ export default class Customer extends User{
         this.phone = phone;
         this.created_At = created_At;
         this.userId = userId;
-        this.userTypeId = userTypeId;
     }
     //Method that makes a post request with body containing the Customer object.
     //User is redirected when the server sends a specific response back
