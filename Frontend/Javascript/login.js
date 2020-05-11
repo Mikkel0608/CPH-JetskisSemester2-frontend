@@ -33,6 +33,8 @@ loginBtn.onclick = ()=>{
                 customer.email = data.email;
                 customer.password = data.password;
                 customer.logIn();
+            } else{
+                alert(json);
             }
         });
 
