@@ -41,6 +41,13 @@ function register() {
         form_valid = false;
     }
 
+    if (isNaN(streetNumber) || streetNumber==null || streetNumber=="")
+    {
+        document.getElementById('streetNumber').style.borderColor = "red";
+        validation_message += "Venligst udfyld husnummer!\n";
+        form_valid = false;
+    }
+
     //4. Validating the City
     if (city==null || city=="")
     {
