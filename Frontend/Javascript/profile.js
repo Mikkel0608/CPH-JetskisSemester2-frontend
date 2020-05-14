@@ -85,7 +85,7 @@ function deleteOrder (){
 }
 
 /*
-MM: The deleteUser function deletes the current user.
+The deleteUser function deletes the current user.
  */
 
 //Function that retrieves info about the user that is currently logged in.
