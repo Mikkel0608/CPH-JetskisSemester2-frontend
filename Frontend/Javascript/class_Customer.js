@@ -26,6 +26,8 @@ export default class Customer extends User{
                 if (json.ok === true){
                     console.log(json.ok);
                     window.location = '../html/loginpage.html';
+                } else {
+                    alert(json);
                 }
             });
     }
