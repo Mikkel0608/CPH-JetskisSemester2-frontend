@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="50dd83c9-82fc-43f4-a014-87cbdc872b58" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javascript/getActiveId.js" beforeDir="false" afterPath="$PROJECT_DIR$/Javascript/getActiveId.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javascript/orderPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Javascript/orderPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javascript/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/Javascript/profile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +46,7 @@
       <updated>1588844405580</updated>
       <workItem from="1588844407242" duration="10529000" />
       <workItem from="1589029677594" duration="758000" />
-      <workItem from="1589102191160" duration="9744000" />
+      <workItem from="1589102191160" duration="13140000" />
     </task>
     <servers />
   </component>
@@ -51,6 +54,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="211" y="120" width="858" height="582" key="find.popup" timestamp="1589449059388">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="211" y="120" width="858" height="582" key="find.popup/0.23.1280.777@0.23.1280.777" timestamp="1589449059388" />
     <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1589011180379">
       <screen x="0" y="23" width="1280" height="777" />
     </state>

@@ -11,8 +11,17 @@ confirmTimeBtn.onclick = (event) => {
     event.preventDefault();
     confirmTime();
 };
+window.addEventListener("load", checkLogin);
+//Checks if the user has the 'jwt-token' cookie. If not, it redirects to the login page
+function checkLogin() {
+    if (document.cookie.indexOf('jwt-token') === -1) {
+        window.location.replace("Loginpage.html");
+    }
+}
+
 var storedProducts = [];
 var shownProducts = [];
+
 function confirmTime() {
     // Creating variables that represent the user selection of date and time on the page
     var rentDayID = document.getElementById("rentDay");
@@ -63,7 +72,7 @@ function confirmTime() {
                             //The generateProduct method creates an HTML element with the found product information
                             newProduct.generateProduct("modelContainer", [i]);
                             //An event listener is added to the select element which activates the calculatePrice function
-                            document.getElementById("modelContainer"+ [i]).getElementsByTagName('div')[2].getElementsByTagName('select')[0].addEventListener('change', calculatePrice);
+                            document.getElementById("modelContainer" + [i]).getElementsByTagName('div')[2].getElementsByTagName('select')[0].addEventListener('change', calculatePrice);
                         }
                     }
                 }
@@ -85,6 +94,7 @@ function confirmTime() {
  */
 //Function written by:
 var finalPrice;
+
 function calculatePrice() {
     //Goes through all the stored products and adds their individual prices and quantities to the finalPrice var
     finalPrice = 0;
@@ -103,7 +113,7 @@ function calculatePrice() {
 
     //The following for loop cycles through the storedProducts, creates clones of the basketProduct div, and inserts the product information, along with the selected amount
     for (let x = 0; x < storedProducts.length; x++) {
-            storedProducts[x].generateBasketProduct("basketProduct","modelContainer", [x]);
+        storedProducts[x].generateBasketProduct("basketProduct", "modelContainer", [x]);
     }
 }
 
@@ -118,7 +128,7 @@ function storeOrder() {
     var products = [];
     //The for loop cycles through the storedProducts array and creates objects for each product selected. All product objects are pushed to the Products array.
     for (let i = 0; i < storedProducts.length; i++) {
-        if (document.getElementById('modelContainer'+[i]) !== null) {
+        if (document.getElementById('modelContainer' + [i]) !== null) {
             var selectElement = document.getElementById("modelContainer" + [i]).getElementsByTagName('div')[2].getElementsByTagName('select')[0];
             if (selectElement.options[selectElement.selectedIndex].value > 0) {
                 var newOrderProduct = new OrderProduct(storedProducts[i].productId, storedProducts[i].price, storedProducts[i].modelName, parseInt(selectElement.options[selectElement.selectedIndex].value));
@@ -127,7 +137,7 @@ function storeOrder() {
         }
     }
     console.log(products);
-    
+
     //The newOrder object is created, and is send to the API with a post request. The client is then redirected to the orderconfirmation page.
     const newOrder = new Order(products, document.getElementById('rentDay').value, document.getElementById('rentMonth').value, document.getElementById('rentYear').value, document.getElementById('rentTime').value, finalPrice);
     newOrder.createOrder();

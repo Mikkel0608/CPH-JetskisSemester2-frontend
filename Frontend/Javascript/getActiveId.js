@@ -1,4 +1,4 @@
-//Onload function that retrieves the phonenumber of the active user
+//Onload function that retrieves the id of the active user
 window.onload = function getActiveId() {
     fetch('http://localhost:3000/profile/user', {
         credentials: "include",
