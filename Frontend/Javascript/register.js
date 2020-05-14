@@ -57,7 +57,7 @@ function register() {
     }
 
     //5. Validating the phone number using isNaN method
-    if (isNaN(phone) || phone==null || phone=="")
+    if (isNaN(phone) || phone==null || phone=="" || phone.toString().length !== 8)
     {
         document.getElementById('phone').style.borderColor = "red";
         validation_message += "Venligst udfyld telefonnummer!\n";
@@ -65,8 +65,10 @@ function register() {
     }
 
     //6. Validating the e-mail
-    if (email==null || email=="")
-    {
+    function emailValidation (email) {
+        return /\S+@\S+\.\S+/.test(email);
+    }
+    if (email==null || email=="" || (emailValidation(document.getElementById("email").value) == false)) {
         document.getElementById('email').style.borderColor = "red";
         validation_message += "Venligst udfyld E-mail!\n";
         form_valid = false;
