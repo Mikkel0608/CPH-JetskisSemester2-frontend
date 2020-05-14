@@ -11,13 +11,6 @@ confirmTimeBtn.onclick = (event) => {
     event.preventDefault();
     confirmTime();
 };
-window.addEventListener("load", checkLogin);
-//Checks if the user has the 'jwt-token' cookie. If not, it redirects to the login page
-function checkLogin() {
-    if (document.cookie.indexOf('jwt-token') === -1) {
-        window.location.replace("Loginpage.html");
-    }
-}
 
 var storedProducts = [];
 var shownProducts = [];

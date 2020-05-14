@@ -50,13 +50,6 @@ logOutBtn.onclick =()=>{
 //The function makes a get request to the /profile/user endpoint where the server sends back user data of the user
 //that is currently logged in.
 //Customer object is created so the method showUserInfo can be called.
-window.addEventListener("load", checkLogin);
-//Checks if the user has the 'jwt-token' cookie. If not, it redirects to the login page
-function checkLogin() {
-    if (document.cookie.indexOf('jwt-token') === -1) {
-        window.location.replace("Loginpage.html");
-    }
-}
 window.onload = function getCustomerInfo() {
     fetch('http://localhost:3000/profile/user', {
         credentials: "include",

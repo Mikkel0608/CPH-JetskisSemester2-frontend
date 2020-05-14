@@ -16,7 +16,7 @@
     <a href="index.html"><button style="border-right-width=1px" id="buttonStyle"> Forside </button></a>
     <a href="orderpage.html"><button style="border-right-width: 0; border-left-width: 0" id="buttonStyle"> Bestil tid </button></a>
     <a href="profile.html"><button id="buttonStyle"> Profil </button> </a>
-    <!-- If user is active in localStorage, show the users phone: -->
+    <!-- If user is logged in, show the users id: -->
     <button id="loginPhone"> </button>
 </div>
 
@@ -125,57 +125,9 @@
         <br style="clear: left">
     </div>
 </div>
-
-<!-- Jetski model 2-->
-    <!--
-<div style="display: none; float: left; width: 100%;" id="modelContainer2">
-    <div style="width:100%; height: 50px; background-color: #00A8FF; position: relative; top: 10px;">
-        <h2 id="jetskiHeadline"> Yamaha Waverunner VX </h2>
-    </div>
-    <div style="float: left; width: 45%; padding: 20px;" id="jetski2Photo">
-        <img style="width: 100%" src="../images/yamaha-waverunner-vx.jpg">
-    </div>
-    <div style="float: left; width: 45%; padding: 20px;" id="jetski2Text">
-        <p>Pris: 500 kr. for 2 timer. <br><br>
-        Antal: </p>
-        <select onchange="calculatePrice()" type="text" name="orderAmount2" id="orderAmount2">
-            <option value="0" selected disabled> -Antal- </option>
-            <option value="00">0</option>
-            <option id="jetski2Amount1" value="1">1</option>
-            <option id="jetski2Amount2" value="2">2</option>
-            <option id="jetski2Amount3" value="3">3</option>
-        </select>
-    </div>
-    <br style="clear: left">
-</div>
--->
-
-<!-- Jetski model 3-->
-    <!--
-<div style="display: none; float: left; width: 100%;" id="modelContainer3">
-    <div style="width:100%; height: 50px; background-color: #00A8FF; position: relative; top: 10px;">
-        <h2 id="jetskiHeadline"> Kawasaki STF-15F </h2>
-    </div>
-    <div style="float: left; width: 45%; padding: 20px;" id="jetski3Photo">
-        <img style="width: 100%" src="../images/kawasaki-stx-15f.jpg">
-    </div>
-    <div style="float: left; width: 45%; padding: 20px;" id="jetski3Text">
-        <p>Pris: 600 kr. for 2 timer. <br><br>
-        Antal: </p>
-        <select onchange="calculatePrice()" type="text" name="orderAmount3" id="orderAmount3">
-            <option value="0" selected disabled> -Antal- </option>
-            <option value="00">0</option>
-            <option id="jetski3Amount1" value="1">1</option>
-            <option id="jetski3Amount2" value="2">2</option>
-            <option id="jetski3Amount3" value="3">3</option>
-        </select>
-    </div>
-    <br style="clear: left">
-</div>
-    -->
 </div>
 <!-- The following is code for the basket. It is made up of different divs, and should only be shown after the user
-selects an amount of jetskis. -->
+selects an amount of products. -->
 <!-- basketDivFull is the div that spans the entire basket. Display should be "none" unless the user adds something
  to it -->
 <div style="display:none;" id="basketDivFull">
@@ -202,6 +154,7 @@ selects an amount of jetskis. -->
 </form>
 <script type="module" src="../Javascript/orderPage.js"></script>
 <script type="text/javascript" src="../Javascript/getActiveId.js"></script>
+<script type="module" src="../Javascript/checkLogin.js"></script>
 
 </body>
 
